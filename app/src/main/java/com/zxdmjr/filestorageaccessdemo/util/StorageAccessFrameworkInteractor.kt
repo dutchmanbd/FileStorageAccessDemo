@@ -2,6 +2,7 @@ package com.zxdmjr.filestorageaccessdemo.util
 
 import android.net.Uri
 import androidx.activity.result.ActivityResultLauncher
+import com.zxdmjr.filestorageaccessdemo.getFileName
 
 class StorageAccessFrameworkInteractor(private val fileSelectionEntryPoint: FileSelectionEntryPoint) {
 
@@ -42,6 +43,13 @@ class StorageAccessFrameworkInteractor(private val fileSelectionEntryPoint: File
                 ?.fileDescriptor
         }
 
-        fileSelectionEntryPoint.onFileSelected(fileDescriptor)
+        val fileName = fileUri?.let {
+            fileSelectionEntryPoint.fileSelectionOwner.contentResolver.getFileName(it)
+        } ?: ""
+
+        fileSelectionEntryPoint.onFileSelected(
+            fileDescriptor,
+            fileName
+        )
     }
 }

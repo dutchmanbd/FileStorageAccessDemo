@@ -26,10 +26,13 @@ class MainActivity : AppCompatActivity(), FileSelectionEntryPoint {
 
     }
 
-    override fun onFileSelected(fileDescriptor: FileDescriptor?) {
+    override fun onFileSelected(fileDescriptor: FileDescriptor?, fileName: String) {
         fileDescriptor?.let {
-            val stream = FileInputStream(it)
-            val file = File(cacheDir, "UploadFile")
+            val inputStream = FileInputStream(it)
+            val file = File(cacheDir, fileName)
+            val outputStream = FileOutputStream(file)
+            inputStream.copyTo(outputStream)
+            // you can use file to upload your server using multipart
         }
     }
 }

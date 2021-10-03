@@ -11,5 +11,5 @@ interface FileSelectionEntryPoint {
 
     fun onFileCreated(fileDescriptor: FileDescriptor?)
 
-    fun onFileSelected(fileDescriptor: FileDescriptor?)
+    fun onFileSelected(fileDescriptor: FileDescriptor?, fileName: String)
 }
