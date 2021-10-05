@@ -3,3 +3,4 @@ plugins {
 }
 rootProject.name = "FileStorageAccessDemo"
 include(":app")
+include(":storagektx")

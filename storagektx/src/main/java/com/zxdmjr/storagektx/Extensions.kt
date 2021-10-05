@@ -1,4 +1,4 @@
-package com.zxdmjr.filestorageaccessdemo
+package com.zxdmjr.storagektx
 
 import android.content.ContentResolver
 import android.net.Uri

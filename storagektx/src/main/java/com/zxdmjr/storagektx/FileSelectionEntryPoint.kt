@@ -1,13 +1,9 @@
-package com.zxdmjr.filestorageaccessdemo.util
+package com.zxdmjr.storagektx
 
 
-import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import java.io.FileDescriptor
 
 interface FileSelectionEntryPoint {
-
-    val fileSelectionOwner: AppCompatActivity
 
     fun onFileCreated(fileDescriptor: FileDescriptor?)
 

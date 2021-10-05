@@ -1,4 +1,4 @@
-package com.zxdmjr.filestorageaccessdemo.util
+package com.zxdmjr.storagektx
 
 data class CreateFileParams(
     val fileMimeType: String,
