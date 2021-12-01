@@ -1,4 +1,5 @@
 # FileStorageAccess
+[![Version](https://jitpack.io/v/dutchmanbd/storagektx.svg?label=lastest)](https://jitpack.io/#dutchmanbd/storagektx)
 
 How to Select Files in Android Easily? Connecting Storage Access Framework and Activity Result API
 
