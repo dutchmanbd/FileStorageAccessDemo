@@ -1,12 +1,12 @@
 buildscript {
-    val kotlin_version by extra("1.5.20")
+    val kotlin_version by extra("1.5.31")
     repositories {
         google()
         mavenCentral()
-        gradlePluginPortal()
+        maven { url = uri("https://www.jitpack.io" ) }
 
-        // Localazy Repository
-        maven("https://maven.localazy.com/repository/release/")
+//        // Localazy Repository
+//        maven("https://maven.localazy.com/repository/release/")
     }
     dependencies {
         classpath("com.android.tools.build:gradle:4.2.2")
@@ -21,12 +21,12 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
-
-        maven("https://jitpack.io")
+        maven { url = uri("https://www.jitpack.io" ) }
     }
 }
 
-task("clean") {
-    delete(rootProject.buildDir)
+tasks {
+    val clean by registering(Delete::class) {
+        delete(buildDir)
+    }
 }
